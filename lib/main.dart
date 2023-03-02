@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My App'),
+          title: const Text('My App'),
         ),
-        body: ListViewHome(),
+        body: const ListViewHome(),
       ),
     );
   }
@@ -35,21 +35,21 @@ class ListViewHome extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       children: const <Widget>[
         ListTile(
-          title: Text("Battery Full"),
-          leading: Icon(Icons.battery_full),
-        ),
+            title: Text("Battery Full"),
+            leading: Icon(Icons.battery_full),
+            trailing: Icon(Icons.star)),
         ListTile(
-          title: Text("Anchor"),
-          leading: Icon(Icons.anchor),
-        ),
+            title: Text("Anchor"),
+            leading: Icon(Icons.anchor),
+            trailing: Icon(Icons.star)),
         ListTile(
-          title: Text("Alarm"),
-          leading: Icon(Icons.access_alarm),
-        ),
+            title: Text("Alarm"),
+            leading: Icon(Icons.access_alarm),
+            trailing: Icon(Icons.star)),
         ListTile(
-          title: Text("Ballot"),
-          leading: Icon(Icons.ballot),
-        )
+            title: Text("Ballot"),
+            leading: Icon(Icons.ballot),
+            trailing: Icon(Icons.star))
       ],
     );
   }
