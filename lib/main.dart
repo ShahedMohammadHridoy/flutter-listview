@@ -35,24 +35,25 @@ class ListViewHome extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       children: const <Widget>[
         ListTile(
-            title: Text("Battery Full"),
-            subtitle: Text("The battery is full."),
-            leading: CircleAvatar(backgroundImage: AssetImage("assets/js.png")),
-            trailing: Icon(Icons.star)),
-        ListTile(
             title: Text("Anchor"),
             subtitle: Text("Lower the anchor."),
-            leading: CircleAvatar(backgroundImage: AssetImage("assets/react.png")),
+            leading: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    "https://miro.medium.com/fit/c/64/64/1*WSdkXxKtD8m54-1xp75cqQ.jpeg")),
             trailing: Icon(Icons.star)),
         ListTile(
             title: Text("Alarm"),
             subtitle: Text("This is the time."),
-            leading: CircleAvatar(backgroundImage: AssetImage("assets/js.png")),
+            leading: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    "https://miro.medium.com/fit/c/64/64/1*WSdkXxKtD8m54-1xp75cqQ.jpeg")),
             trailing: Icon(Icons.star)),
         ListTile(
             title: Text("Ballot"),
             subtitle: Text("Cast your vote."),
-            leading: CircleAvatar(backgroundImage: AssetImage("assets/react.png")),
+            leading: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    "https://miro.medium.com/fit/c/64/64/1*WSdkXxKtD8m54-1xp75cqQ.jpeg")),
             trailing: Icon(Icons.star))
       ],
     );
