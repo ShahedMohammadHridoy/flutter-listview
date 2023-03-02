@@ -36,18 +36,22 @@ class ListViewHome extends StatelessWidget {
       children: const <Widget>[
         ListTile(
             title: Text("Battery Full"),
+            subtitle: Text("The battery is full."),
             leading: Icon(Icons.battery_full),
             trailing: Icon(Icons.star)),
         ListTile(
             title: Text("Anchor"),
+            subtitle: Text("Lower the anchor."),
             leading: Icon(Icons.anchor),
             trailing: Icon(Icons.star)),
         ListTile(
             title: Text("Alarm"),
+            subtitle: Text("This is the time."),
             leading: Icon(Icons.access_alarm),
             trailing: Icon(Icons.star)),
         ListTile(
             title: Text("Ballot"),
+            subtitle: Text("Cast your vote."),
             leading: Icon(Icons.ballot),
             trailing: Icon(Icons.star))
       ],
