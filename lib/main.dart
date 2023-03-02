@@ -37,22 +37,22 @@ class ListViewHome extends StatelessWidget {
         ListTile(
             title: Text("Battery Full"),
             subtitle: Text("The battery is full."),
-            leading: Icon(Icons.battery_full),
+            leading: CircleAvatar(backgroundImage: AssetImage("assets/js.png")),
             trailing: Icon(Icons.star)),
         ListTile(
             title: Text("Anchor"),
             subtitle: Text("Lower the anchor."),
-            leading: Icon(Icons.anchor),
+            leading: CircleAvatar(backgroundImage: AssetImage("assets/react.png")),
             trailing: Icon(Icons.star)),
         ListTile(
             title: Text("Alarm"),
             subtitle: Text("This is the time."),
-            leading: Icon(Icons.access_alarm),
+            leading: CircleAvatar(backgroundImage: AssetImage("assets/js.png")),
             trailing: Icon(Icons.star)),
         ListTile(
             title: Text("Ballot"),
             subtitle: Text("Cast your vote."),
-            leading: Icon(Icons.ballot),
+            leading: CircleAvatar(backgroundImage: AssetImage("assets/react.png")),
             trailing: Icon(Icons.star))
       ],
     );
