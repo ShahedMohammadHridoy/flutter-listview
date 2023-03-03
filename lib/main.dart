@@ -20,53 +20,35 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('My App'),
         ),
-        body: const ListViewHome(),
+        body: ListViewHome(),
       ),
     );
   }
 }
 
 class ListViewHome extends StatelessWidget {
-  const ListViewHome({Key? key}) : super(key: key);
+  final titles = ["List 1", "List 2", "List 3"];
+  final subtitles = [
+    "Here is list 1 subtitle",
+    "Here is list 2 subtitle",
+    "Here is list 3 subtitle"
+  ];
+  final icons = [Icons.ac_unit, Icons.access_alarm, Icons.access_time];
 
+   ListViewHome({super.key});
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(8),
-      children: const <Widget>[
-        Card(
-            child: ListTile(
-                title: Text("Battery Full"),
-                subtitle: Text("The battery is full."),
-                leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://images.unsplash.com/photo-1547721064-da6cfb341d50")),
-                trailing: Icon(Icons.star))),
-        Card(
-            child: ListTile(
-                title: Text("Anchor"),
-                subtitle: Text("Lower the anchor."),
-                leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://miro.medium.com/fit/c/64/64/1*WSdkXxKtD8m54-1xp75cqQ.jpeg")),
-                trailing: Icon(Icons.star))),
-        Card(
-            child: ListTile(
-                title: Text("Alarm"),
-                subtitle: Text("This is the time."),
-                leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://miro.medium.com/fit/c/64/64/1*WSdkXxKtD8m54-1xp75cqQ.jpeg")),
-                trailing: Icon(Icons.star))),
-        Card(
-            child: ListTile(
-                title: Text("Ballot"),
-                subtitle: Text("Cast your vote."),
-                leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://miro.medium.com/fit/c/64/64/1*WSdkXxKtD8m54-1xp75cqQ.jpeg")),
-                trailing: Icon(Icons.star)))
-      ],
-    );
+    return ListView.builder(
+        itemCount: titles.length,
+        itemBuilder: (context, index) {
+          return Card(
+              child: ListTile(
+                  title: Text(titles[index]),
+                  subtitle: Text(subtitles[index]),
+                  leading: const CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          "https://images.unsplash.com/photo-1547721064-da6cfb341d50")),
+                  trailing: Icon(icons[index])));
+        });
   }
 }
